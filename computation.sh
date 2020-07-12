@@ -15,6 +15,6 @@ result=(["result1"]=$result1 ["result2"]=$result2 ["result3"]=$result3
 
 array=(${result[@]})
 
-IFS=$'\n' sorted=($(sort -gr <<<"${array[*]}"))
+IFS=$'\n' sorted=($(sort -g <<<"${array[*]}"))
 unset IFS
 echo ${sorted[@]}
