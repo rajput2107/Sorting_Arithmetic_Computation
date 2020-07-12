@@ -13,4 +13,8 @@ declare -A result
 result=(["result1"]=$result1 ["result2"]=$result2 ["result3"]=$result3 
 ["result4"]=$result4)
 
-array=${result[@]}
+array=(${result[@]})
+
+IFS=$'\n' sorted=($(sort -gr <<<"${array[*]}"))
+unset IFS
+echo ${sorted[@]}
