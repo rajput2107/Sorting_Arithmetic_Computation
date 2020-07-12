@@ -9,3 +9,6 @@ result2=$(( $a*$b+$c ))
 result3=$(( $c+$a/$b ))
 result4=$(( $a%$b+$c ))
 
+declare -A result
+result=(["result1"]=$result1 ["result2"]=$result2 ["result3"]=$result3 
+["result4"]=$result4)
